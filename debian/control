@@ -1,0 +1,12 @@
+Source: ros-humble-tiago-pro-moveit-config
+Section: misc
+Priority: optional
+Maintainer: Narcis Miguel <narcis.miguel@pal-robotics.com>
+Build-Depends: debhelper (>= 9.0.0), ros-humble-ament-cmake-auto, ros-humble-ament-lint-auto <!nocheck>, ros-humble-ament-lint-common <!nocheck>, ros-humble-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-humble-tiago-pro-moveit-config
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-humble-launch-pal, ros-humble-moveit-configs-utils, ros-humble-moveit-kinematics, ros-humble-moveit-planners-chomp, ros-humble-moveit-planners-ompl, ros-humble-moveit-ros-control-interface, ros-humble-moveit-ros-move-group, ros-humble-moveit-ros-perception, ros-humble-moveit-ros-visualization, ros-humble-pal-sea-arm-moveit-config, ros-humble-tiago-pro-description, ros-humble-ros-workspace
+Description: An automatically generated package with all the configuration and launch files for using the tiago_pro with the MoveIt! Motion Planning Framework
