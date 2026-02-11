@@ -39,9 +39,11 @@ class LaunchArguments(LaunchArgumentsBase):
     ft_sensor_right: DeclareLaunchArgument = TiagoProArgs.ft_sensor_right
     ft_sensor_left: DeclareLaunchArgument = TiagoProArgs.ft_sensor_left
     base_type: DeclareLaunchArgument = TiagoProArgs.base_type
-
+    has_teleop_arms: DeclareLaunchArgument = TiagoProArgs.has_teleop_arms
     use_sim_time: DeclareLaunchArgument = CommonArgs.use_sim_time
     use_sensor_manager_arg: DeclareLaunchArgument = CommonArgs.use_sensor_manager
+    ft_sensor_teleop_left: DeclareLaunchArgument = TiagoProArgs.ft_sensor_teleop_left
+    ft_sensor_teleop_right: DeclareLaunchArgument = TiagoProArgs.ft_sensor_teleop_right
 
 
 def declare_actions(launch_description: LaunchDescription, launch_args: LaunchArguments):
@@ -87,6 +89,9 @@ def start_move_group(context, *args, **kwargs):
         'ft_sensor_right': read_launch_argument('ft_sensor_right', context),
         'ft_sensor_left': read_launch_argument('ft_sensor_left', context),
         "base_type": read_launch_argument("base_type", context),
+        'has_teleop_arms': read_launch_argument('has_teleop_arms', context),
+        'ft_sensor_teleop_left': read_launch_argument('ft_sensor_teleop_left', context),
+        'ft_sensor_teleop_right': read_launch_argument('ft_sensor_teleop_right', context),
     }
 
     # Trajectory Execution Functionality
@@ -123,6 +128,7 @@ def start_move_group(context, *args, **kwargs):
         'use_sim_time': LaunchConfiguration('use_sim_time'),
         'publish_robot_description_semantic': True,
         'robot_description_timeout': 60.0,
+        'capabilities': "move_group/ExecuteTaskSolutionCapability"
     }
 
     move_group_params = [

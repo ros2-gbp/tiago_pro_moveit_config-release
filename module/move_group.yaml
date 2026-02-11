@@ -8,5 +8,7 @@ move_group:
            end_effector_right:=@end_effector_right@
            end_effector_left:=@end_effector_left@
            ft_sensor_right:=@ft_sensor_right@
-           ft_sensor_left:=@ft_sensor_left@"
+           ft_sensor_left:=@ft_sensor_left@
+           has_teleop_arms:=@has_teleop_arms@"
+           
            
