@@ -143,6 +143,8 @@
     <disable_collisions link1="arm_left_7_link" link2="head_screen_link" reason="Never"/>
     <disable_collisions link1="arm_left_7_link" link2="torso_head_link" reason="Never"/>
     <disable_collisions link1="arm_left_7_link" link2="virtual_base_laser_link" reason="Never"/>
+    <disable_collisions link1="arm_left_7_link" link2="gripper_left_camera_link" reason="Never"/>
+    <disable_collisions link1="arm_left_tool_link" link2="gripper_left_camera_link" reason="Never"/>
     <disable_collisions link1="arm_left_tool_link" link2="base_footprint" reason="Never"/>
     <disable_collisions link1="arm_left_tool_link" link2="base_imu_link" reason="Never"/>
     <disable_collisions link1="arm_left_tool_link" link2="head_front_camera_bottom_screw_frame" reason="Never"/>
