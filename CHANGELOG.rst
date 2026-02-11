@@ -2,6 +2,27 @@
 Changelog for package tiago_pro_moveit_config
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.4.1 (2026-02-05)
+------------------
+* delete teleop end effector
+* Contributors: ileniaperrella
+
+1.4.0 (2026-02-02)
+------------------
+* add missing config params for moveit
+* add end effectors and ft teleops arg to the move_group
+* add camera wrist collisions
+* clean srdf
+* fix pipeline
+* add collision ft
+* add srd for teleop
+* Contributors: ileniaperrella
+
+1.3.3 (2026-01-22)
+------------------
+* add move_group executor plugin
+* Contributors: Matteo Villani
+
 1.3.2 (2025-04-17)
 ------------------
 * Add srdf collisions for allegro hand
