@@ -44,6 +44,8 @@ class LaunchArguments(LaunchArgumentsBase):
     use_sensor_manager_arg: DeclareLaunchArgument = CommonArgs.use_sensor_manager
     ft_sensor_teleop_left: DeclareLaunchArgument = TiagoProArgs.ft_sensor_teleop_left
     ft_sensor_teleop_right: DeclareLaunchArgument = TiagoProArgs.ft_sensor_teleop_right
+    wrist_model_right: DeclareLaunchArgument = TiagoProArgs.wrist_model_right
+    wrist_model_left: DeclareLaunchArgument = TiagoProArgs.wrist_model_left
 
 
 def declare_actions(launch_description: LaunchDescription, launch_args: LaunchArguments):
@@ -92,6 +94,8 @@ def start_move_group(context, *args, **kwargs):
         'has_teleop_arms': read_launch_argument('has_teleop_arms', context),
         'ft_sensor_teleop_left': read_launch_argument('ft_sensor_teleop_left', context),
         'ft_sensor_teleop_right': read_launch_argument('ft_sensor_teleop_right', context),
+        'wrist_model_right': read_launch_argument('wrist_model_right', context),
+        'wrist_model_left': read_launch_argument('wrist_model_left', context),
     }
 
     # Trajectory Execution Functionality
