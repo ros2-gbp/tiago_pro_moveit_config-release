@@ -37,6 +37,8 @@ class LaunchArguments(LaunchArgumentsBase):
     ft_sensor_right: DeclareLaunchArgument = TiagoProArgs.ft_sensor_right
     ft_sensor_left: DeclareLaunchArgument = TiagoProArgs.ft_sensor_left
     base_type: DeclareLaunchArgument = TiagoProArgs.base_type
+    wrist_model_right: DeclareLaunchArgument = TiagoProArgs.wrist_model_right
+    wrist_model_left: DeclareLaunchArgument = TiagoProArgs.wrist_model_left
 
     use_sim_time: DeclareLaunchArgument = CommonArgs.use_sim_time
     use_sensor_manager_arg: DeclareLaunchArgument = CommonArgs.use_sensor_manager
@@ -77,6 +79,8 @@ def start_rviz(context, *args, **kwargs):
         'ft_sensor_right': read_launch_argument('ft_sensor_right', context),
         'ft_sensor_left': read_launch_argument('ft_sensor_left', context),
         "base_type": read_launch_argument("base_type", context),
+        'wrist_model_right': read_launch_argument('wrist_model_right', context),
+        'wrist_model_left': read_launch_argument('wrist_model_left', context),
     }
 
     # Trajectory Execution Functionality
