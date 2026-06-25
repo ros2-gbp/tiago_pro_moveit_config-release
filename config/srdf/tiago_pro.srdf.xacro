@@ -13,7 +13,9 @@
     <xacro:arg name="has_teleop_arms" default="False"/>
     <xacro:arg name="ft_sensor_left" default="rokubi"/>
     <xacro:arg name="ft_sensor_right" default="rokubi"/>
-    
+    <xacro:arg name="wrist_model_right" default="spherical-wrist"/>
+    <xacro:arg name="wrist_model_left" default="spherical-wrist"/>
+
     <xacro:property name="arm_type_left" value="$(arg arm_type_left)"/>
     <xacro:property name="arm_type_right" value="$(arg arm_type_right)"/>
     <xacro:property name="has_arm_right" value="${arm_type_right not in ['no-arm']}"/>
@@ -27,6 +29,10 @@
     <xacro:property name="ft_sensor_right" value="$(arg ft_sensor_right)"/>
     <xacro:property name="has_ft_sensor_left" value="${ft_sensor_left not in ['no-ft-sensor']}"/>
     <xacro:property name="has_ft_sensor_right" value="${ft_sensor_right not in ['no-ft-sensor']}"/>
+    <xacro:property name="wrist_model_right" value="$(arg wrist_model_right)"/>
+    <xacro:property name="wrist_model_left" value="$(arg wrist_model_left)"/>
+    <xacro:property name="has_short_wrist_right" value="${wrist_model_right == 'short-wrist'}"/>
+    <xacro:property name="has_short_wrist_left" value="${wrist_model_left == 'short-wrist'}"/>
 
     <!-- https://answers.ros.org/question/276062/adding-objects-in-moveit-fixed-in-the-world-while-the-mobile-manipulator-is-moving-confusion-with-root_joint-planning_frame-and-srdf-structure/ -->
     <xacro:property name="robot" value="tiago_pro"/>
@@ -125,6 +131,12 @@
     </xacro:unless>
     <xacro:if value="${has_teleop_arms}">
         <xacro:include filename="$(find tiago_pro_moveit_config)/config/srdf/teleop_arms.srdf.xacro"/>
+    </xacro:if>
+    <xacro:if value="${has_short_wrist_left}">
+         <xacro:include filename="$(find tiago_pro_moveit_config)/config/srdf/disable_collisions/left_short-wrist.srdf.xacro" />
+    </xacro:if>
+    <xacro:if value="${has_short_wrist_right}">
+         <xacro:include filename="$(find tiago_pro_moveit_config)/config/srdf/disable_collisions/right_short-wrist.srdf.xacro" />
     </xacro:if>
     <xacro:include filename="$(find tiago_pro_moveit_config)/config/srdf/disable_collisions/${robot}_${config_left}_${config_right}.srdf.xacro" />
 </robot>
