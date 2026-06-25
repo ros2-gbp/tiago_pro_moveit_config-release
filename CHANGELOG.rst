@@ -2,6 +2,16 @@
 Changelog for package tiago_pro_moveit_config
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.5.1 (2026-04-27)
+------------------
+* Fix prefix module move_group
+* Contributors: Aina
+
+1.5.0 (2026-03-18)
+------------------
+* Add support for short-wrist
+* Contributors: Noel Jimenez
+
 1.4.1 (2026-02-05)
 ------------------
 * delete teleop end effector
