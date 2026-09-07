@@ -8,8 +8,8 @@
     <xacro:arg name="arm_type_left" default="tiago-arm"/>
     <xacro:arg name="arm_type_right" default="tiago-arm"/>
 
-    <xacro:arg name="end_effector_left" default="pal-hey5"/>
-    <xacro:arg name="end_effector_right" default="pal-hey5"/>
+    <xacro:arg name="end_effector_left" default="pal-pro-gripper"/>
+    <xacro:arg name="end_effector_right" default="pal-pro-gripper"/>
     <xacro:arg name="has_teleop_arms" default="False"/>
     <xacro:arg name="ft_sensor_left" default="rokubi"/>
     <xacro:arg name="ft_sensor_right" default="rokubi"/>
