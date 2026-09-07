@@ -2,6 +2,11 @@
 Changelog for package tiago_pro_moveit_config
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.5.2 (2026-08-25)
+------------------
+* Fix default value for end effector
+* Contributors: Aina Irisarri
+
 1.5.1 (2026-04-27)
 ------------------
 * Fix prefix module move_group
